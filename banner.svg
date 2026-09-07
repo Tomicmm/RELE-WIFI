@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="260" fill="url(#bg)"/>
+  <circle cx="1030" cy="130" r="180" fill="url(#glow)"/>
+
+  <!-- circuito decorativo de fondo -->
+  <g stroke="#334155" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M0 40 H120 V80 H220"/>
+    <path d="M0 220 H160 V190 H260"/>
+    <circle cx="120" cy="40" r="4" fill="#334155"/>
+    <circle cx="220" cy="80" r="4" fill="#334155"/>
+    <circle cx="160" cy="220" r="4" fill="#334155"/>
+  </g>
+
+  <!-- icono WiFi + relay -->
+  <g transform="translate(80,90)">
+    <path d="M40 55 a55 55 0 0 1 110 0" stroke="url(#accent)" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M58 62 a37 37 0 0 1 74 0" stroke="url(#accent)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <path d="M76 69 a19 19 0 0 1 38 0" stroke="url(#accent)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="95" cy="72" r="8" fill="url(#accent)"/>
+    <rect x="60" y="82" width="70" height="42" rx="6" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+    <rect x="70" y="92" width="20" height="22" rx="3" fill="#22d3ee" opacity="0.85"/>
+    <line x1="100" y1="103" x2="122" y2="103" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- texto principal -->
+  <text x="270" y="118" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#f8fafc">RELE-WIFI</text>
+  <text x="270" y="158" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#94a3b8">Control remoto de una carga de 220V por WiFi + MQTT</text>
+  <text x="270" y="192" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#22d3ee">ESP32-WROOM-32 · PC817 · MMBT2222A · Mosquitto</text>
+
+  <rect x="270" y="205" width="640" height="4" rx="2" fill="url(#accent)"/>
+</svg>

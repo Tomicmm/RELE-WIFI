@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .box { fill:#1e293b; stroke:#334155; stroke-width:2; rx:12; }
+      .accent { fill:#0b1220; stroke:#22d3ee; stroke-width:2; rx:12; }
+      .power { fill:#0b1220; stroke:#f59e0b; stroke-width:2; rx:12; }
+      .t-title { font-family: Arial, Helvetica, sans-serif; font-size:19px; font-weight:700; fill:#f8fafc; }
+      .t-sub { font-family: Arial, Helvetica, sans-serif; font-size:13px; fill:#94a3b8; }
+      .link { stroke:#94a3b8; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .link-power { stroke:#f59e0b; stroke-width:2; fill:none; stroke-dasharray:5,4; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="#0f172a"/>
+
+  <!-- Fila superior: control -->
+  <rect x="40" y="40" width="190" height="80" class="box"/>
+  <text x="135" y="75" text-anchor="middle" class="t-title">App / Cliente</text>
+  <text x="135" y="97" text-anchor="middle" class="t-sub">publica en rele/wifi/set</text>
+
+  <rect x="320" y="40" width="220" height="80" class="accent"/>
+  <text x="430" y="75" text-anchor="middle" class="t-title">Broker Mosquitto</text>
+  <text x="430" y="97" text-anchor="middle" class="t-sub">MQTT</text>
+
+  <rect x="630" y="40" width="230" height="80" class="accent"/>
+  <text x="745" y="70" text-anchor="middle" class="t-title">ESP32-WROOM-32</text>
+  <text x="745" y="90" text-anchor="middle" class="t-sub">WiFi + PubSubClient</text>
+  <text x="745" y="108" text-anchor="middle" class="t-sub">rele_wifi.ino</text>
+
+  <path class="link" d="M230 80 H320"/>
+  <path class="link" d="M540 80 H630"/>
+
+  <!-- Fila inferior: etapa de potencia -->
+  <rect x="630" y="200" width="150" height="80" class="box"/>
+  <text x="705" y="235" text-anchor="middle" class="t-title">PC817</text>
+  <text x="705" y="257" text-anchor="middle" class="t-sub">Optoacoplador</text>
+
+  <rect x="820" y="200" width="180" height="80" class="box"/>
+  <text x="910" y="235" text-anchor="middle" class="t-title">MMBT2222A</text>
+  <text x="910" y="257" text-anchor="middle" class="t-sub">Transistor</text>
+
+  <rect x="1040" y="200" width="130" height="80" class="box" transform="translate(0,0)"/>
+  <text x="1105" y="230" text-anchor="middle" class="t-title" font-size="17">Relé</text>
+  <text x="1105" y="250" text-anchor="middle" class="t-sub">SDR-05VDC-SL-C</text>
+  <text x="1105" y="266" text-anchor="middle" class="t-sub">Carga 220V</text>
+
+  <path class="link" d="M745 120 V200"/>
+  <path class="link" d="M780 240 H820"/>
+  <path class="link" d="M1000 240 H1040"/>
+
+  <!-- Alimentación -->
+  <rect x="40" y="220" width="230" height="80" class="power"/>
+  <text x="155" y="250" text-anchor="middle" class="t-title" font-size="17">Fuente switching</text>
+  <text x="155" y="270" text-anchor="middle" class="t-sub">220V → 5V 1A</text>
+
+  <rect x="330" y="220" width="220" height="80" class="power"/>
+  <text x="440" y="250" text-anchor="middle" class="t-title" font-size="17">AMS1117 3.3V</text>
+  <text x="440" y="270" text-anchor="middle" class="t-sub">Alimenta al ESP32</text>
+
+  <path class="link-power" d="M270 260 H330"/>
+  <path class="link-power" d="M550 260 H630 V240"/>
+  <path class="link-power" d="M700 240 Q745 260 745 200" opacity="0"/>
+
+  <!-- Leyenda -->
+  <line x1="60" y1="360" x2="110" y2="360" class="link"/>
+  <text x="120" y="365" class="t-sub">Datos (WiFi / MQTT / GPIO)</text>
+
+  <line x1="60" y1="390" x2="110" y2="390" class="link-power"/>
+  <text x="120" y="395" class="t-sub">Alimentación (5V / 3.3V)</text>
+</svg>
